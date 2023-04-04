@@ -1,0 +1,24 @@
+<form [formGroup]="loginForm">
+    <p style="margin-left: 40%;">Please enter your login and password!</p>
+    <div class="container" style= "margin-left: 40%;">
+        
+        <div class="form-group">
+            <label> Username: </label>
+            <input class="form-control" type="text" formControlName="username" required >
+        </div>
+
+        <br/>
+
+        <div>
+            <label> Password: </label>
+            <input class="form-control" type="password" formControlName="password" required>
+        </div>
+
+        <br/>
+
+        <div>
+            <button  type="button"  style="width: 25%;" (click)="onSubmit()">Sign in</button>
+        </div>
+
+    </div>
+</form>

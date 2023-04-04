@@ -1,0 +1,45 @@
+<form [formGroup]="userForm">
+    <p style="margin-left: 40%;">Please complete the details below</p>
+    <div class="container" style= "margin-left: 40%;">
+        
+        <div class="form-group">
+            <label> Name: </label>
+            <input class="form-control" type="text" formControlName="Name" required >
+        </div>
+
+        <br/>
+
+        <div>
+            <label> Surname: </label>
+            <input class="form-control" type="text" formControlName="Surname" required>
+        </div>
+
+        <br/>
+
+        <div>
+            <label> Email: </label>
+            <input class="form-control" type="password" formControlName="Email" required>
+        </div>
+
+        <br/>
+
+        <div>
+            <label> ID Number: </label>
+            <input class="form-control" type="password" formControlName="ID_number" required>
+        </div>
+
+        <br/>
+
+        <div>
+            <label> Date of Birth: </label>
+            <input class="form-control" type="password" formControlName="DoB" required>
+        </div>
+
+        <br/>
+
+        <div>
+            <button  type="button"  style="width: 25%;" (click)="update()">Update</button>
+        </div>
+
+    </div>
+</form>
