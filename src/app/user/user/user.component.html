@@ -1,45 +1,65 @@
-<form [formGroup]="userForm">
-    <p style="margin-left: 40%;">Please complete the details below</p>
-    <div class="container" style= "margin-left: 40%;">
-        
-        <div class="form-group">
-            <label> Name: </label>
-            <input class="form-control" type="text" formControlName="Name" required >
-        </div>
+<div class="outer-container">
+    <mat-card class="inner-container">
+        <mat-card-header>
 
-        <br/>
+            <div>
+                <h2 style="margin-left: 50%;">Please complete the form below!</h2>
+            </div>            
+        </mat-card-header>
+        <mat-card-content>  
+    
+            <form [formGroup]="userForm">
+                
+                <div class="container" style= "margin-left: 30%;">
+                    
+                    <div class="form-group">
+                        <mat-form-field>
+                            <label> Name: </label>
+                            <input matInput class="form-control" type="text" formControlName="Name" required >
+                        </mat-form-field>
+                    </div>
 
-        <div>
-            <label> Surname: </label>
-            <input class="form-control" type="text" formControlName="Surname" required>
-        </div>
+                    <div class="form-group">
+                        <mat-form-field>
+                            <label> Surname: </label>
+                            <input matInput class="form-control" type="text" formControlName="Surname" required >
+                        </mat-form-field>
+                    </div>
 
-        <br/>
+                    
+                    <div class="form-group">
+                        <mat-form-field>
+                            <label> Email: </label>
+                            <input matInput class="form-control" type="email" formControlName="Email" required >
+                        </mat-form-field>
+                    </div>
 
-        <div>
-            <label> Email: </label>
-            <input class="form-control" type="password" formControlName="Email" required>
-        </div>
+                    <div class="form-group">
+                        <mat-form-field>
+                            <label> ID Number: </label>
+                            <input matInput class="form-control" type="number" formControlName="ID_number" required >
+                        </mat-form-field>
+                    </div>
 
-        <br/>
 
-        <div>
-            <label> ID Number: </label>
-            <input class="form-control" type="password" formControlName="ID_number" required>
-        </div>
+                    <div class="form-group">
+                        <mat-form-field>
+                            <label> Date of Birth: </label>
+                            <input matInput class="form-control" type="date" formControlName="DoB" required >
+                        </mat-form-field>
+                    </div>
 
-        <br/>
 
-        <div>
-            <label> Date of Birth: </label>
-            <input class="form-control" type="password" formControlName="DoB" required>
-        </div>
 
-        <br/>
 
-        <div>
-            <button  type="button"  style="width: 25%;" (click)="update()">Update</button>
-        </div>
+                    <div>
+                        <button  type="button"  style="width: 20%; margin-left: 15%;" (click)="update()">Update</button>
+                    </div>
 
-    </div>
-</form>
+                </div>
+            </form>
+
+        </mat-card-content>
+    </mat-card>
+
+</div>

@@ -10,6 +10,8 @@ import { UserService } from 'src/app/Shared/userService/user.service';
 })
 export class LoginComponent implements OnInit{
 
+  logo = 'assets/logo1.png';
+
   ngOnInit(): void {
     
   }
@@ -59,6 +61,10 @@ export class LoginComponent implements OnInit{
         
       }
     });
+
+  }
+
+  register(){
 
   }
 

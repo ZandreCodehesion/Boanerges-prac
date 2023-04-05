@@ -1,0 +1,12 @@
+.inner-container {
+    max-width: 500px;
+    /* width: 500px; */
+    /* height: 500px; */
+    /* position:static; */
+    content:unset;
+    left: 40%;
+    /* margin-top: 20%; */
+    bottom: 20%;
+    /* display: block; */
+    background: #26a760;
+  }

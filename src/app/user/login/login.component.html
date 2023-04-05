@@ -1,24 +1,57 @@
-<form [formGroup]="loginForm">
-    <p style="margin-left: 40%;">Please enter your login and password!</p>
-    <div class="container" style= "margin-left: 40%;">
-        
-        <div class="form-group">
-            <label> Username: </label>
-            <input class="form-control" type="text" formControlName="username" required >
-        </div>
 
-        <br/>
+<div class="outer-container">
+    <mat-card class="inner-container">
+        <mat-card-header>
+            <div>
+                <img class="CompanyLogo" src={{logo}}>
+            </div>
+            
+        </mat-card-header>
+        <mat-card-content>
 
-        <div>
-            <label> Password: </label>
-            <input class="form-control" type="password" formControlName="password" required>
-        </div>
+            <div>
+                <h2 style="margin-left: 25%;">Please enter your login details!</h2>
+            </div>
 
-        <br/>
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()"> <!--Might need to add (ngSubmit)="onSubmit()"-->
+                
 
-        <div>
-            <button  type="button"  style="width: 25%;" (click)="onSubmit()">Sign in</button>
-        </div>
+                <div class="container" style= "margin-left: 30%;">
+                    
+                    <div class="form-group" style="margin-right: 70%;">
+                        <mat-form-field>
+                            <label> Username: </label>
+                            <input matInput type="text" formControlName="username" required >
+                        </mat-form-field>
+                    </div>
 
-    </div>
-</form>
+                    
+
+                    <div>
+
+                        <div class="form-group">
+                            <mat-form-field>
+                                <label> Password: </label>
+                                <input matInput type="password" formControlName="password" required >
+                            </mat-form-field>
+                        </div>
+
+                       
+                    </div>
+
+                    <br/>
+
+                    
+                    <button mat-raised-button type="button"  style="width: 20%; margin-left: 15%;" >Sign in</button>
+                    
+
+                </div>
+            </form>
+
+            <!-- <button mat-flat-button class="register-btn" (click)="register()">
+                Register
+             </button> -->
+        </mat-card-content>
+    </mat-card>
+
+</div>
